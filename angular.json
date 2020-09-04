@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "i-Property": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "i-Property"
+    }
+  },
+  "defaultProject": "i-Property",
+  "cli": {
+    "analytics": "0fb9bb42-f654-4621-98df-74c0bfd495fd"
+  }
 }
