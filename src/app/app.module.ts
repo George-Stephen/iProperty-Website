@@ -8,6 +8,10 @@ import { SearchComponent } from './components/search/search.component';
 import { PropertyFormComponent } from './components/property-form/property-form.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PropertiesComponent } from './components/properties/properties.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ContactComponent } from './components/contact/contact.component';
     SearchComponent,
     PropertyFormComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent,
+    NavbarComponent,
+    PropertiesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

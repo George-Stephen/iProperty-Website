@@ -5,14 +5,18 @@ import {PropertyFormComponent} from './components/property-form/property-form.co
 import {SearchComponent} from './components/search/search.component'
 import {ContactComponent} from './components/contact/contact.component'
 import {AboutComponent} from './components/about/about.component'
+import {NotFoundComponent} from './components/not-found/not-found.component'
+import {PropertiesComponent} from './components/properties/properties.component'
 
 
 const routes: Routes = [
-  {path :"",component :DashboardComponent},
-  {path :"new",component : PropertyFormComponent},
-  {path :"search",component:SearchComponent},
-  {path : "Contact",component:ContactComponent}
-  {path :"about",component : AboutComponent}
+  {path :'',component :DashboardComponent},
+  {path :'new',component : PropertyFormComponent},
+  {path :'search',component:SearchComponent},
+  {path:'properties',component:PropertiesComponent},
+  {path : 'contact',component:ContactComponent},
+  {path :'about',component : AboutComponent},
+  {path :'**',component :NotFoundComponent}
 ];
 
 @NgModule({
