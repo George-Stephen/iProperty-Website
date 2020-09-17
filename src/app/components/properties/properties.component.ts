@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./properties.component.css']
 })
 export class PropertiesComponent implements OnInit {
+  image1:string ="assets/1.jpeg";
 
   constructor() { }
 
