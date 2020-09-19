@@ -13,6 +13,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PropertiesComponent } from './components/properties/properties.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms'; 
+import { ContactService } from './components/contact/contact.service';
+import {PropertyServiceService} from './components/properties/property-service.service'
 
 @NgModule({
   declarations: [
@@ -28,12 +31,17 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    ContactService,
+    PropertyServiceService
+  ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
