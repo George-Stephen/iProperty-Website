@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output} from '@angular/core';
+import { Property } from 'src/property';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { SearchService } from 'src/search.service';
+import { ActivatedRoute } from '@angular/router';
+import { Identifiers } from '@angular/compiler';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +12,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+    
+  searchProperties = true;
 
-  constructor() { }
+  property: Property;
+  propertyname:string
 
-  ngOnInit(): void {
+  constructor( 
+    private searchService: SearchService,
+  ) { }
+  search(propertyname) {
+    this.searchService.getUserDetail(propertyname).then(
+      (results) => {
+        this.property = this.searchService.newUser;
+        console.log(results);
+      },
+      (error) => {
+        alert('Enter valid name');
+        console.log(error);
+      }
+    );
+  }
+ngOnInit() {
+    
   }
 
-}
+
+
+  }
+
