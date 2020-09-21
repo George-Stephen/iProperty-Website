@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
+import {PropertyServiceService} from './property-service.service'
 
 @Component({
   selector: 'app-properties',
@@ -10,16 +11,16 @@ export class PropertiesComponent implements OnInit {
   image1:string ="assets/1.jpeg";
   properties : any;
 
-  constructor( public httpservice :HttpClient ) {
+  constructor( public httpservice :PropertyServiceService ) {
   
    }
  
 
   ngOnInit(): void {
-    this.httpservice.get("https://salemrest.herokuapp.com/api/properties/").subscribe(properties =>{
-    this.properties = properties
+    this.httpservice.getProperties
+    this.properties = this.httpservice.properties
     console.log(this.properties)
-  })
+  
 }
 
 }

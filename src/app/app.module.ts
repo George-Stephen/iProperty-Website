@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -16,7 +16,17 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { ContactService } from './components/contact/contact.service';
 import {PropertyServiceService} from './components/properties/property-service.service'
-
+import {SearchService} from '../search.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule,}from '@angular/material/input';
+import{ MatIconModule } from '@angular/material/icon'
+import {MatAutocompleteModule} from '@angular/material/autocomplete'
+import{ MatChipsModule} from '@angular/material/chips'
+import{MatFormFieldModule} from '@angular/material/form-field'
+import { NgProgress, NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { from } from 'rxjs';
+import { SearchFormComponent } from './components/search-form/search-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,18 +38,30 @@ import {PropertyServiceService} from './components/properties/property-service.s
     NotFoundComponent,
     NavbarComponent,
     PropertiesComponent,
-    FooterComponent
+    FooterComponent,
+    SearchFormComponent,
+
   ],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatIconModule, 
+    MatInputModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    BrowserAnimationsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule,
   ],
   providers: [
     ContactService,
-    PropertyServiceService
+    PropertyServiceService,
+    SearchService
   ],
   bootstrap: [AppComponent],
   
