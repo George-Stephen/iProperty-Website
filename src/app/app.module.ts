@@ -25,7 +25,10 @@ import{ MatChipsModule} from '@angular/material/chips'
 import{MatFormFieldModule} from '@angular/material/form-field'
 import { NgProgress, NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
-import { from } from 'rxjs';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 @NgModule({
   declarations: [
@@ -39,7 +42,7 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
     NavbarComponent,
     PropertiesComponent,
     FooterComponent,
-    SearchFormComponent,
+    SearchFormComponent
 
   ],
   imports: [
@@ -57,6 +60,9 @@ import { SearchFormComponent } from './components/search-form/search-form.compon
     BrowserAnimationsModule,
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule
   ],
   providers: [
     ContactService,
