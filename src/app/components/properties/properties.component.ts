@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import {PropertyServiceService} from './property-service.service'
+import { Property } from 'src/property';
 
 @Component({
   selector: 'app-properties',
@@ -9,7 +10,7 @@ import {PropertyServiceService} from './property-service.service'
 })
 export class PropertiesComponent implements OnInit {
   image1:string ="assets/1.jpeg";
-  properties : any;
+  properties : Property;
 
   constructor( public httpservice :PropertyServiceService ) {
   
