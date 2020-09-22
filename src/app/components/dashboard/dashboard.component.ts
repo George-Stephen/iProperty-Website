@@ -15,6 +15,8 @@ export class DashboardComponent implements OnInit {
   stephen : string = "assets/stephen.jpeg";
   peter : string = "assets/peter.jpeg";
   anthony : string = "assets/anthony.jpeg";
+  logo : string = "assets/play.png"
+  app_image : string = "assets/App_image.jpeg";
 
 
   constructor() { }
