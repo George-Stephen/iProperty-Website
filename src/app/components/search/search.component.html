@@ -11,9 +11,10 @@
 </div>
 <div class="container">
   <h2 class="text-center">Lands</h2>
-  <div class="row" *ngFor="let repository of property">
-    <div class="col-md-4 card" style="margin-left: 10px;">
-      <img src= {{repository.image}} class="card-img-top">
+  <div class="row" >
+    <div class="col-md-4" style="margin-left: 10px;" *ngFor="let repository of property">
+      <div class="card" >
+        <img src= {{repository.image}} class="card-img-top">
       <div class="card-body">
         <div class="row">
           <div class="col-md-6" style="line-height: 1.2;">
@@ -29,6 +30,7 @@
       <div class="card-text">
         <article>{{repository.description}}</article>
     </div>
+      </div>
       </div>
     </div>
   </div>
