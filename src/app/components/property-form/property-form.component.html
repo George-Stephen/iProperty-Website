@@ -60,12 +60,12 @@
                     required #image="ngModel"[(ngModel)]="newProperty.image"
                     images-only="true"
                     public-key="557ba8f5e78026902bd0"
-                    (change)="onFileChange($event)">
+                    >
                     <div [hidden]="image.valid || image.pristine" class="alert alert-danger">
                         <p>Image is required</p>
                     </div>   
                 </div>
-              <div class="form-control text-center">
+              <div class="text-center" style="padding: 10px 10px;">
                 <button type="submit" class="btn btn-dark">Add Property</button>
               </div>
         </div>
