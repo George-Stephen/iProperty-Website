@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 })
 export class SearchService {
   newUser: Property;
-  postUrl:string = 'https://salemrest.herokuapp.com/api/search/?search='
+  postUrl:string = 'https://sallemrest.herokuapp.com/api/search/?search='
   console: any;
 
   constructor(private http: HttpClient) {
@@ -29,7 +29,7 @@ getUserDetail(propertyname: string) {
   let promise = new Promise((resolve, reject) => {
     this.http
       .get<Property>(
-        'https://salemrest.herokuapp.com/api/search/?search='+
+        'https://sallemrest.herokuapp.com/api/search/?search='+
         propertyname
       )
       .toPromise()
