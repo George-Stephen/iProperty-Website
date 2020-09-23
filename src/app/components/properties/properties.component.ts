@@ -10,7 +10,7 @@ import { Property } from 'src/property';
 })
 export class PropertiesComponent implements OnInit {
   image1:string ="assets/1.jpeg";
-  properties : Property;
+  properties : Property[];
 
   constructor( public httpservice :PropertyServiceService ) {
   

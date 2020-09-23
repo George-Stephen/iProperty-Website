@@ -7,7 +7,7 @@ import {Property} from 'src/property'
   providedIn: 'root'
 })
 export class PropertyServiceService {
-  properties : Property ;
+  properties : Property[] ;
 
 
   constructor( private http :HttpClient) { 
@@ -16,7 +16,7 @@ export class PropertyServiceService {
 
   getProperties(){
     let promise = new Promise((resolve,reject) =>{
-      this.http.get<Property>("http://sallemrest.herokuapp.com/api/properties/")
+      this.http.get<Property[]>("http://sallemrest.herokuapp.com/api/properties/")
       .toPromise()
       .then((response) =>{
           this.properties = response;
