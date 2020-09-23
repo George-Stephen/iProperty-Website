@@ -1,24 +1,24 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Property } from './property';
-import { Observable } from 'rxjs'
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-}
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PropertyService {
-  propertyUrl:string = 'https://salemrest.herokuapp.com/api/posts/'
-  addPropertyUrl:string = 'https://salemrest.herokuapp.com/properties/api/properties/create'
-  deletePropertyUrl:string = 'https://salemrest.herokuapp.com/api/properties'
+  @Input() properties: Property;
 
+  @Output() addProperty = new EventEmitter<Property>();
+
+  newProperty = new Property(0,'', '', '','',0,'');
+
+  submitQuote(){
+    this.addProperty.emit(this.newProperty);
+    this.newProperty = new Property(0,'', '', '','',0,'',);
+  }
   constructor(private http:HttpClient) { }
 }
-
 
