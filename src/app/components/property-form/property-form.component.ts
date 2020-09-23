@@ -11,11 +11,11 @@ export class PropertyFormComponent implements OnInit {
 
   @Output() addProperty = new EventEmitter<Property>();
 
-  newProperty = new Property(0,'', '', '','',0,'');
+  newProperty = new Property(0,'', '', '','',0,'',0,0);
 
   submitQuote(){
     this.addProperty.emit(this.newProperty);
-    this.newProperty = new Property(0,'', '', '','',0,'',);
+    this.newProperty = new Property(0,'', '', '','',0,'',0,0);
   }
 
  

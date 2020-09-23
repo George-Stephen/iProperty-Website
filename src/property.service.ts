@@ -17,7 +17,7 @@ export class PropertyService {
 
   submitQuote(){
     this.addProperty.emit(this.newProperty);
-    this.newProperty = new Property(0,'', '', '','',0,'',0,0);
+    this.newProperty = new Property(0,'', '', '','',0,'',0,0,);
   }
   constructor(private http:HttpClient) { }
 }
