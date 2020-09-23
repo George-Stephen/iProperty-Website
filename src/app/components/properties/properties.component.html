@@ -2,9 +2,9 @@
 <div class="properties">
     <h4 style="text-decoration: underline; text-decoration-style: double; text-align: center;">properties</h4>
     <div>
-        <div>
-            <div class="col-md-4" style="margin-left: 10px; margin-bottom: 10px;"  *ngFor= "let property of properties  let i=index;">
-                <div class="card text-center" style="width: 18rem;">
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 10px; margin-bottom: 10px;"  *ngFor= "let property of properties">
+                <div class="card text-center" style="width: 18rem; background-color:#969BA0; border-radius: 10px;">
                     <img class="card-img-top" src="https://salemrest.herokuapp.com{{property.image}}" alt="Card image cap">
                     <div class="card-body">
                         <div class="row">
@@ -15,7 +15,7 @@
                                 
                             </div>
                             <div class="col-md-6">
-                                <p style="font-style: italic;">{{property.price}}</p>
+                                <p style="font-style: italic;float:right;">{{property.price}}</p>
                             </div>
                         </div>
                         <div class="card-text">
