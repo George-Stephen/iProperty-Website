@@ -9,6 +9,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6" style="line-height: 1.2;">
+                                <a [routerLink]="['/properties']" routerLinkActive='active' class="text-dark" style="text-decoration: none;">
                                 <p><b style="font-size: 15px;">{{property.name}}</b>
                                     <br>
                                     <span style="font-style: italic;font-size: 12px;" >{{property.location}}</span></p>
@@ -21,6 +22,7 @@
                         <div class="card-text">
                             <article>{{property.description}}</article>
                         </div>
+                            </a>
                     </div>
                 </div>
             </div>
