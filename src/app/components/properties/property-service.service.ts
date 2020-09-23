@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
+import {Property} from 'src/property'
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PropertyServiceService {
-  properties : any ;
+  properties : Property ;
 
 
   constructor( private http :HttpClient) { 
@@ -13,9 +15,15 @@ export class PropertyServiceService {
   }
 
   getProperties(){
-    return this.http.get("https://salemrest.herokuapp.com/api/properties/").subscribe(properties =>{
-      this.properties = properties
+    let promise = new Promise((resolve,reject) =>{
+      this.http.get<Property>("http://sallemrest.herokuapp.com/api/properties/")
+      .toPromise()
+      .then((response) =>{
+          this.properties = response;
+          resolve()
+      })
     })
+    return promise;
   }
 
 }

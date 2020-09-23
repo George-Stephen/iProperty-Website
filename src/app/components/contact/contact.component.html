@@ -1,1 +1,42 @@
+<div class="intouch text-center">
+    <h3 style="text-decoration: underline;">Get in touch with us</h3>
+    <article>We believe communication is what makes a community</article>
+</div>
+<div class="contact row" style="padding: 10px 10px;">
+    <div class="col-md-6">
+        <h3 class="text-center" style="text-decoration: underline;">Reach out to us</h3>
+        <a href="tel:+254 723 309 556" target="blank"><p class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Tel: +254 723 309 556</p> </a>
+        <a href="mailto:hotstepholdings@gmail.com" target="blank"><p class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Email: hotstepholdings@gmail.com</p></a>
+        <a href="https://www.facebook.com/hotstepholdings" target="blank"><p class="text-center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Facebook page :hotstep holdings</p></a>
+        <p style="text-align: center;">
+            <b>Location: </b>Wambaa House<br>
+            1st Floor,Room S14<br>
+            Kikuyu town,Opposite Njoki Hse
+        </p>         
+    </div>
+    <div class="col-md-6">
+       <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
+           <h4 class="text-center" style="text-decoration: underline;">Contact us</h4>
+           <div class="form-row">
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Email address.." name="Email" formControlName="Email" required>
+               </div>
+               <div class="col">
+                <input type="text" class="form-control" placeholder="Full_name.." name="Fullname"  formControlName="Fullname"  required>
+               </div>
+               
+           </div>
+           <textarea class="form-control" rows="4" placeholder="Comment.." formControlName="Comment" name="Comment" style="margin-top: 20px;" required></textarea>
+           <div class="form-group" style="text-align: center; margin-top: 20px;">
+            <button type="submit" class="btn btn-outline-success" [disabled]="!FormData.valid" style="width: 200px;">Submit message</button>
+           </div>
+       </form>
+    </div>
+</div>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8772154665385!2d36.6604724300981!3d-1.2444819990921923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1f8906dcd14d%3A0x9e0b5e48f719eb77!2sHotstep%20Holdings!5e0!3m2!1sen!2ske!4v1600431236933!5m2!1sen!2ske" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
+
+
 
