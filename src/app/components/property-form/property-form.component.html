@@ -1,4 +1,4 @@
-<form style="padding: 40px 40px;">
+<!-- <form style="padding: 40px 40px;">
      <div class="form-group">
         <input type="text" class="form-control" placeholder="Name of property" required>
     </div>
@@ -17,4 +17,29 @@
     <div class="form-group" style="text-align: center;">
         <button type="submit" class="btn btn-outline-success" style="width: 200px;">Add property</button>
     </div> 
-</form>
+</form> -->
+<div class="container-fluid">
+    <h2 class="text-center">Add Properties</h2>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="real">
+            <div class="form-group">
+                <label for="quo">Properties:</label>
+                <textarea class="form-control" name="quo" id="quo" rows="4" required #quo='ngModel' [(ngModel)]="newProperty.name"></textarea>
+
+                <div [hidden]="quo.valid || quo.pristine" class="alert alert-danger">
+                    <p>Name is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" name="author" id="author" class="form-control" required #description="ngModel" [(ngModel)]="newProperty.description">
+
+                <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                    <p>Description is required</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark">Add Property</button>
+        </div>
+    </form>
+
+</div>
