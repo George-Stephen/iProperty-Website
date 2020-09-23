@@ -1,6 +1,6 @@
 <div class="container main">
   <ng-progress></ng-progress>
-  <div class="jumbotron bg-blacks">
+  <div class="jumbotron bg-blacks" style="margin-top: 10px;">
     <h1 class="display-4 text-center"> Land-Search</h1>
     <h3 class="text-center">Input Name</h3>
     <form class="form-group" id="brian">
@@ -14,7 +14,7 @@
   <div class="row" >
     <div class="col-md-4" style="margin-left: 10px; " *ngFor="let repository of property">
       <div class="card" style="background-color:#969BA0; border-radius: 10px;" >
-        <img src= {{repository.image}} class="card-img-top">
+        <img src= {{repository.image}} class="card-img-top img-fluid">
       <div class="card-body">
         <div class="row">
           <div class="col-md-6" style="line-height: 1.2;">
