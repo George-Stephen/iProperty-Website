@@ -1,11 +1,19 @@
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-  }
-  
-  .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
+.services{
+  background-image: url(https://wallpaperaccess.com/full/1660069.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  padding: 100px 100px;
+}
+.properties{
+  background-color: #969BA0;
+}
+.scrolling-wrapper {
+  overflow: auto;
+  white-space: nowrap; 
+}
+.card {
+  display: inline-block;
+}
