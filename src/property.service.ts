@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class PropertyService {
-  propertyUrl:string = 'https://techlandjarvis.herokuapp.com/api/properties/'
+  propertyUrl:string = 'https://sallemrest.herokuapp.com/api/properties/'
   createPropertyUrl:string = 'https://sallemrest.herokuapp.com/api/properties/create'
   constructor(private http:HttpClient) { 
   }
