@@ -12,7 +12,7 @@ export class SearchService {
   console: any;
 
   constructor(private http: HttpClient) {
-    this.newUser = new Property(0,"","","","",0,"",);
+    this.newUser = new Property(0,"","","","",0,"",0,0);
 }
 getUserDetail(propertyname: string) {
   interface Property{
@@ -22,8 +22,9 @@ getUserDetail(propertyname: string) {
     avatar_url: string;
     id:number;
     price:number;
-    image:string
-  
+    image:string;
+    latitude:number;
+    longitude:number;
   }
 
   let promise = new Promise((resolve, reject) => {
