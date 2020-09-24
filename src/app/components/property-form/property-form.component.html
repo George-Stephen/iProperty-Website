@@ -1,38 +1,33 @@
-<div id="post" class="container mt-5">
-
+<div id="post" class="container" style="padding: 10px;">
     <div class="card" style="padding: 10px 10px;">
-        <h3 style="background-color: #7fffd4;"class=" text-center card-header">Add Property</h3>
-
+        <h3 style="background-color: #969BA0;"class=" text-center card-header">Add Property</h3>
         <form [formGroup]="PostForm" (ngSubmit)="onSubmit()">
           <div class="card-body">
             <div class="row">
               <div class="col">
                 <div class="form-group">
-                  <input type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="Property name" >
+                  <input style="background-color: transparent;" type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="Property name" >
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
-                  <input type="text" formControlName="location" class="form-control" id="exampleFormControlInput1" placeholder="location" >
+                  <input style="background-color: transparent;" type="text" formControlName="location" class="form-control" id="exampleFormControlInput1" placeholder="location" >
                 </div>
               </div>
             </div>
-            
         <div class="form-group">
-          <div class="custom-file mb-3">
-            <input type="file" class="custom-file-input"  uploadcare-widget id="file" name="filename" images-only="true" public-key="557ba8f5e78026902bd0"
-            (change)="onFileChange($event)">
-            <label class="custom-file-label" for="customFile">Choose photo</label>
-          </div>
-        </div>  
+            <input type="file" class="form-control-file" uploadcare-widget id="file"  images-only="true" public-key="557ba8f5e78026902bd0"
+            (change)="onFileChange($event)">  
+        </div> 
+        <div class="form-group">
+          <input style="background-color: transparent;" type="text" class="form-control" placeholder="Price" formControlName = "price">
+      </div> 
     <div class="form-group">
-        <textarea class="form-control" formControlName="description" rows="3" placeholder="property Description" ></textarea>
+        <textarea style="background-color: transparent;" class="form-control" formControlName="description" rows="3" placeholder="property Description" ></textarea>
     </div>
-      <div class="form-group">
-          <input type="text" class="form-control" placeholder="Price" formControlName = "price">
-      </div>
+      
       <div class="text-center">
-        <button type="submit" style="border-radius: 10px;" class="btn btn-outline-success">Submit property</button>
+        <button type="submit" style="border-radius: 10px; width: 50%;" class="btn btn-outline-success">Submit property</button>
       </div>
     </div>
     </form>

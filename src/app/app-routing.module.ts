@@ -11,7 +11,7 @@ import {PropertiesComponent} from './components/properties/properties.component'
 
 const routes: Routes = [
   {path :'',component :DashboardComponent},
-  {path :'new', component : PropertyFormComponent},
+  {path :'property/new', component : PropertyFormComponent},
   {path :'search',component:SearchComponent},
   {path:'properties',component:PropertiesComponent},
   {path : 'contact',component:ContactComponent},
