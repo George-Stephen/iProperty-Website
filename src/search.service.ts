@@ -23,9 +23,8 @@ getUserDetail(propertyname: string) {
     id:number;
     price:number;
     image:string;
-    latitude:number,
-   longitude:number,
-  
+    latitude:number;
+    longitude:number;
   }
 
   let promise = new Promise((resolve, reject) => {

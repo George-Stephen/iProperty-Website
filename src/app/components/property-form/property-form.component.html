@@ -1,74 +1,53 @@
-<div class="container-fluid">
-    <h2 class="text-center">Add Properties</h2>
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
-        <div class="real">
-            <div class="form-group">
-                <label for="quo">Properties:</label>
-                <textarea class="form-control" name="quo" id="quo" rows="4" required #quo='ngModel' [(ngModel)]="newProperty.name"></textarea>
+<div id="post" class="container mt-5">
 
-                <div [hidden]="quo.valid || quo.pristine" class="alert alert-danger">
-                    <p>Name is required</p>
-                </div>
+    <div class="card">
+        <h3 style="background-color: #7fffd4;"class=" text-center card-header">Add Property</h3>
+
+        <form [formGroup]="PostForm" (ngSubmit)="onSubmit()">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Property Name</label>
+              <input type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="Header" >
+              <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
+                <div *ngIf="f.image.errors.required">Name is required.</div>
+              </div>
             </div>
-            <!-- <div class="form-group">
-                <label for="longitude">Longitude:</label>
-                <input type="number" name="longitude" id="longitude" class="form-control" required #longitude="ngModel" [(ngModel)]="newProperty.longitude">
-
-                <div [hidden]="longitude.valid || longitude.pristine" class="alert alert-danger">
-                    <p>Longitude is required</p>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="latitude">Latitude:</label>
-                <input type="number" name="latitude" id="latitude" class="form-control" required #latitude="ngModel" [(ngModel)]="newProperty.latitude">
-
-                <div [hidden]="latitude.valid || latitude.pristine" class="alert alert-danger">
-                    <p>Latitude is required</p>
-                </div>
-            </div> -->
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <input type="text" name="author" id="author" class="form-control" required #description="ngModel" [(ngModel)]="newProperty.description">
-
-                <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
-                    <p>Description is required</p>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="price">Price:</label>
-                <input type="text" name="price" id="price" class="form-control" required #price="ngModel" [(ngModel)]="newProperty.price">
-
-                <div [hidden]="price.valid || price.pristine" class="alert alert-danger">
-                    <p>Price is required</p>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="location">Location:</label>
-                <input type="text" name="location" id="location" class="form-control" required #location="ngModel" [(ngModel)]="newProperty.location">
-
-                <div [hidden]="location.valid || location.pristine" class="alert alert-danger">
-                    <p>Location is required</p>
-                </div>
-            </div>
-            <div class="form-group">
+            
+        <div class="form-group">
                 <label for="file">File</label>
                 <input 
                     uploadcare-widget
                     id="file" 
                     type="file" 
                     class="form-control"
-                    required #image="ngModel"[(ngModel)]="newProperty.image"
                     images-only="true"
                     public-key="557ba8f5e78026902bd0"
-                    >
-                    <div [hidden]="image.valid || image.pristine" class="alert alert-danger">
-                        <p>Image is required</p>
-                    </div>   
+                    (change)="onFileChange($event)">
+                <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
+                    <div *ngIf="f.image.errors.required">File is required.</div>
                 </div>
-              <div class="text-center" style="padding: 10px 10px;">
-                <button type="submit" class="btn btn-dark">Add Property</button>
-              </div>
+     
+            </div>
+    </div>   
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Description</label>
+        <textarea class="form-control" formControlName="content" id="exampleFormControlTextarea1" rows="3" placeholder="Say something" ></textarea>
+        <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
+          <div *ngIf="f.image.errors.required">Description is required.</div>
         </div>
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlSelect1">Price</label>
+          <select class="form-control" id="exampleFormControlSelect1" formControlName="category" >
+            <option></option>
+            <option *ngFor="let property of properties"[value]="property.price">{{ property.price }}</option>
+          </select>
+          <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
+            <div *ngIf="f.image.errors.required">Price required!</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
     </form>
-
 </div>
