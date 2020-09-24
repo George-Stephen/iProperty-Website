@@ -31,7 +31,7 @@
     </div>   
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Description</label>
-        <textarea class="form-control" formControlName="content" id="exampleFormControlTextarea1" rows="3" placeholder="Say something" ></textarea>
+        <textarea class="form-control" formControlName="content" id="exampleFormControlTextarea1" rows="3" placeholder="property Description" ></textarea>
         <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
           <div *ngIf="f.image.errors.required">Description is required.</div>
         </div>
@@ -46,8 +46,8 @@
             <div *ngIf="f.image.errors.required">Price required!</div>
         </div>
       </div>
-      <div class="card-footer">
-        <button type="submit" class="btn btn-dark">Submit</button>
+      <div class="card-footer text-center">
+        <button type="submit" style="border-radius: 10px;" class="btn btn-outline-success">Submit property</button>
       </div>
     </form>
 </div>

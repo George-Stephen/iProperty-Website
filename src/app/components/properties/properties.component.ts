@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import {PropertyServiceService} from './property-service.service'
 import { Property } from 'src/property';
-import { PropertyWrite } from '@angular/compiler';
 
 @Component({
   selector: 'app-properties',
@@ -11,7 +10,7 @@ import { PropertyWrite } from '@angular/compiler';
 })
 export class PropertiesComponent implements OnInit {
   image1:string ="assets/1.jpeg";
-  properties : Property;
+  properties : any;
 
   constructor( public httpservice :PropertyServiceService ) {
   
@@ -19,11 +18,10 @@ export class PropertiesComponent implements OnInit {
  
 
   ngOnInit(): void {
-    this.httpservice.getProperties().then((results)=>{
-      this.properties = this.httpservice.properties
-      console.log(results);
-    })
-  
+   this.httpservice.getProperties().subscribe(res =>{
+     this.properties = res['properties']
+     console.log(this.properties)
+   })
 }
 
 }
