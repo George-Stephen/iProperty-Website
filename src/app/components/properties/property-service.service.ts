@@ -15,15 +15,7 @@ export class PropertyServiceService {
   }
 
   getProperties(){
-    let promise = new Promise((resolve,reject) =>{
-      this.http.get<Property>("http://sallemrest.herokuapp.com/api/properties/")
-      .toPromise()
-      .then((response) =>{
-          this.properties = response;
-          resolve()
-      })
-    })
-    return promise;
+    return this.http.get("https://sallemrest.herokuapp.com/api/properties/")
   }
 
 }
