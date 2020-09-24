@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import {PropertyServiceService} from './property-service.service'
 import { Property } from 'src/property';
+import { PropertyWrite } from '@angular/compiler';
 
 @Component({
   selector: 'app-properties',
