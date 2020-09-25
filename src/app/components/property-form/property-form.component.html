@@ -1,57 +1,34 @@
-<div id="post" class="container mt-5">
-
-    <div class="card">
-        <h3 style="background-color: #7fffd4;"class=" text-center card-header">Add Property</h3>
-
+<div id="post" class="container" style="padding: 10px;">
+    <div class="card" style="padding: 10px 10px;">
+        <h3 style="background-color: #969BA0;"class=" text-center card-header">Add Property</h3>
         <form [formGroup]="PostForm" (ngSubmit)="onSubmit()">
           <div class="card-body">
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Property Name</label>
-              <input type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="Header" >
-              <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
-                <div *ngIf="f.image.errors.required">Name is required.</div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <input style="background-color: transparent;" type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="Property name" >
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Description</label>
-              <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" rows="3" placeholder="Say something" ></textarea>
-              <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
-                <div *ngIf="f.image.errors.required">Description is required.</div>
-              </div>
-            </div>  
-            <div class="form-group">
-              <label for="exampleFormControlInput1">Price</label>
-              <input type="text" formControlName="price" class="form-control" id="exampleFormControlInput1" placeholder="Price" >
-              <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
-                <div *ngIf="f.image.errors.required">Price is required.</div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Location</label>
-              <textarea class="form-control" formControlName="location" id="exampleFormControlTextarea1" rows="1" placeholder="Location" ></textarea>
-              <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
-                <div *ngIf="f.image.errors.required">Location is required.</div>
+              <div class="col">
+                <div class="form-group">
+                  <input style="background-color: transparent;" type="text" formControlName="location" class="form-control" id="exampleFormControlInput1" placeholder="location" >
+                </div>
               </div>
             </div>
         <div class="form-group">
-                <label for="file">File</label>
-                <input 
-                    uploadcare-widget
-                    id="file" 
-                    type="file" 
-                    class="form-control"
-                    images-only="true"
-                    public-key="557ba8f5e78026902bd0"
-                    (change)="onFileChange($event)">
-                <div *ngIf="f.image.touched && f.image.invalid" class="alert alert-danger">
-                    <div *ngIf="f.image.errors.required">File is required.</div>
-                </div>
-     
-            </div>
-    </div> 
-    
-      <div class="card-footer">
-        <button type="submit" class="btn btn-dark">Submit</button>
+            <input type="file" class="form-control-file" uploadcare-widget id="file"  images-only="true" public-key="557ba8f5e78026902bd0"
+            (change)="onFileChange($event)">  
+        </div> 
+        <div class="form-group">
+          <input style="background-color: transparent;" type="text" class="form-control" placeholder="Price" formControlName = "price">
+      </div> 
+    <div class="form-group">
+        <textarea style="background-color: transparent;" class="form-control" formControlName="description" rows="3" placeholder="property Description" ></textarea>
+    </div>
+      
+      <div class="text-center">
+        <button type="submit" style="border-radius: 10px; width: 50%;" class="btn btn-outline-success">Submit property</button>
       </div>
+    </div>
     </form>
 </div>

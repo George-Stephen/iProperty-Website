@@ -3,24 +3,24 @@
     <div  id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-90" [src]= company alt="First slide"  height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
+            <img class="d-block w-90 img-fluid" [src]= company alt="First slide"  height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
           </div>
             <div class="carousel-item ">
-              <img class="d-block w-90" [src]= image1 alt="First slide"  height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
+              <img class="d-block w-90 img-fluid" [src]= image1 alt="First slide"  height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
               <div class="carousel-caption d-none d-md-block" style="color: #969BA0;">
                 <h5>Find your dream home</h5>
                 <p>We aim to getting you to your destined property to enable you to build your dream home for you and your family </p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-90" [src]= image2 alt="Second slide" height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
+              <img class="d-block w-90 img-fluid" [src]= image2 alt="Second slide" height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
               <div class="carousel-caption d-none d-md-block" style="color: #969BA0;">
                 <h5>Nation-wide services</h5>
                 <p>We have lands for sale in major counties in Kenya i.e: Kiambu,Nakuru,Nairobi e.t.c</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-90" [src]= image3 alt="Third slide" height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
+              <img class="d-block w-90 img-fluid" [src]= image3 alt="Third slide" height="600" style="display: block;margin-left: auto;margin-right: auto; position: relative;">
               <div class="carousel-caption d-none d-md-block" style="color: #8E96A2;">
                 <h5>Guaranteed support</h5>
                 <p>We have a committed team of land-surveyors and real-estate agents who will guarantee full authenticity of our services </p>
@@ -47,7 +47,7 @@
         <article>
           We would like to show the available properties in the vast nation of Kenya.If you want an urban experience ,start by taking a tour through the available property 
         </article>
-        <a routerLink="/properties"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px; height:50px; width: 200px; margin-top: 40px;">View properties <span>&#8614;</span></button></a>
+        <a routerLink="/properties"><button type="button" class="btn btn-outline-primary" style="border-radius: 20px; height:50px; width: 200px; margin-top: 40px;">View properties <span>&#x27BE;</span></button></a>
       </div>
     </div>
 </div>
@@ -61,7 +61,7 @@
       <article>
         You can download our app on Google play store for free,Gain much better and faster experience in viewing our active properties
       </article>
-      <img [src] = logo height="70" width="150" >
+      <img [src] = logo height="70" width="200" >
     </div>
   </div>
 </div>
@@ -69,7 +69,8 @@
       <div class="row">
           <div class="col-md-4">
             <div>
-                <div>
+                <div class="text-center">
+                  <img [src] = home height="50" width="50" >
                   <h6 style="text-decoration: underline; text-align: center;">Modern and safe living</h6>
                 </div>
                 <div>
@@ -81,7 +82,8 @@
           </div>
           <div class="col-md-4">
             <div>
-              <div>
+              <div class="text-center">
+                <img [src] =peace height="50" width="50">
                 <h6 style="text-decoration: underline; text-align: center;">Peaceful location</h6>
               </div>
               <div>
@@ -93,8 +95,9 @@
       </div>
     <div class="col-md-4">
         <div>
-          <div>
-            <h6 style="text-decoration: underline; text-align: center;">Greating starting prices</h6>
+          <div class="text-center">
+            <img [src] = money height="50" width="50">
+            <h6 style="text-decoration: underline; text-align: center;">Awesome starting prices</h6>
           </div>
           <div>
               <article style="text-align: center;">
@@ -106,33 +109,38 @@
   </div>
  </div>
  <div class="agents text-center" style="padding: 20px 20px; background-color: #969BA0;">
-  <h4 style="text-decoration: underline;">Our agents</h4>
+  <h4 style="text-decoration: underline;">Our team</h4>
     <div class="row">
-      <div class="col-md-4">
-        <div class="card" style="width: 18rem; background-color: transparent;">
-          <img class="card-img-top" [src] = stephen height="400" width="100">
-          <div class="card-body">
-            <h5 class="card-title" style="text-decoration: underline;">Stephen Kigathi</h5>
-            <p class="card-text">Wambaa Hse,1st Floor.Room S14,Kikuyu Town,Opp.Njoki Hse.</p>
-            <a href="tel:0723309556" class="btn btn-primary">Call now</a>
-          </div>
-        </div>
-      </div>
       <div class="col-md-4">
         <div class="card" style="width: 18rem; background-color: transparent;">
           <img class="card-img-top" [src] = peter height="300" width="100">
           <div class="card-body">
-            <h5 class="card-title" style="text-decoration: underline;">Peter Nganga(Muhindi)</h5>
+            <h5 class="card-title" style="text-decoration: underline;">Peter Nganga</h5>
+            <p style="font-style: italic;">Agent</p>
             <p class="card-text">TPM CYBER,Grnd floor,Wanduta building,Ndeiya,Limuru.</p>
             <a href="tel:0729444986" class="btn btn-primary">Call now</a>
           </div>
         </div>
       </div>
+
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem; background-color: transparent;">
+          <img class="card-img-top" [src] = stephen height="350" width="150">
+          <div class="card-body">
+            <h5 class="card-title" style="text-decoration: underline;">Stephen Kigathi</h5>
+            <p style="font-style: italic;">Director</p>
+            <p class="card-text">Wambaa Hse,1st Floor.Room S14,Kikuyu Town,Opp.Njoki Hse.</p>
+            <a href="tel:0723309556" class="btn btn-primary">Call now</a>
+          </div>
+        </div>
+      </div>
+    
       <div class="col-md-4">
         <div class="card" style="width: 18rem; background-color: transparent;">
           <img class="card-img-top" [src] = anthony height="400" width="100">
           <div class="card-body">
-            <h5 class="card-title" style="text-decoration: underline;">Anthony Kamau</h5>
+            <h5 class="card-title" style="text-decoration: underline;">Anthony Kamau(Muhindi)</h5>
+            <p style="font-style: italic;">Sales manager</p>
             <p class="card-text">Wambaa Hse,1st Floor.Room S14,Kikuyu Town,Opp.Njoki Hse.</p>
             <a href="tel: 0728526744" class="btn btn-primary">Call now</a>
           </div>

@@ -12,8 +12,9 @@ export class PropertyServiceService {
   constructor( private http :HttpClient) { 
    
   }
-  getProperties():Observable<Property[]> {
-    return this.http.get<Property[]>(`${this.propertyUrl}`);
+
+  getProperties(){
+    return this.http.get("https://sallemrest.herokuapp.com/api/properties/")
   }
   
   

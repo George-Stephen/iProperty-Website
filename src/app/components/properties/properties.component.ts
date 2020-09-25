@@ -10,18 +10,20 @@ import { Property } from 'src/property';
 })
 export class PropertiesComponent implements OnInit {
   image1:string ="assets/1.jpeg";
-  properties:Property[];
+  properties : any;
 
-  constructor( private propertyService :PropertyServiceService ) {
+  constructor( private httpservice :PropertyServiceService ) {
   
    }
+ 
 
-  ngOnInit():void {
-    this.propertyService.getProperties().subscribe(properties => {
-      this.properties = properties;
-    });
-      }
+  ngOnInit(): void {
+   this.httpservice.getProperties().subscribe(res =>{
+     this.properties = res['properties']
+     console.log(this.properties)
+   })
 }
-    
+
+}  
     
       
