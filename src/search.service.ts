@@ -3,6 +3,7 @@ import { Property} from './property'
 import { Observable, from } from 'rxjs';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +13,7 @@ export class SearchService {
   console: any;
 
   constructor(private http: HttpClient) {
-    this.newUser = new Property(0,"","","","",0,"",0,0);
+    this.newUser = new Property(0,"","","","",0,null,0,0);
 }
 getUserDetail(propertyname: string) {
   interface Property{
@@ -22,7 +23,7 @@ getUserDetail(propertyname: string) {
     avatar_url: string;
     id:number;
     price:number;
-    image:string;
+    image:any;
     latitude:number;
     longitude:number;
   }

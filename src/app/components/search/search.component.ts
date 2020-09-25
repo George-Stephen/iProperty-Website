@@ -27,10 +27,7 @@ export class SearchComponent implements OnInit {
         this.property = this.searchService.newUser;
         console.log(results);
       },
-      (error) => {
-        alert('Enter valid name');
-        console.log(error);
-      }
+     
     );
   }
 ngOnInit() {

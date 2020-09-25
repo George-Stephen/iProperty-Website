@@ -16,7 +16,7 @@ const httpOptions = {
 })
 export class PropertyService {
   propertyUrl:string = 'https://sallemrest.herokuapp.com/api/properties/'
-  createPropertyUrl:string = 'https://sallemrest.herokuapp.com/api/properties/create'
+  createPropertyUrl:string = 'https://salland.herokuapp.com/api/properties/create'
   constructor(private http:HttpClient) { 
   }
   getProperties():Observable<Property[]> {
